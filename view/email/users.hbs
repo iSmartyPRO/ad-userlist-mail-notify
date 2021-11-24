@@ -1,0 +1,65 @@
+<table id="root" width="100%" cellpadding="0" cellspacing="0" bgcolor="#e4e4e4" align="center">
+  <tr>
+    <td>
+      <table id="top-message" cellpadding="20" cellspacing="0" width="800" align="center">
+
+      </table> {{!-- top-message --}}
+
+      <table id="main" cellpadding="0" cellspacing="15" bgcolor="#ffffff" width="800" , align="center">
+        <tr>
+          <td>
+            <table id="header" cellpadding="10" cellspacing="0" align="center">
+              <tr>
+                <td width="790" style="background:#ffffff;color:#183867;" align="center">
+                  <h1 style="padding:0px;margin:0px">Список пользователей из ИТ системы</h1>
+                  <h2 style="padding:0px;margin:0px"><i>(объект: {{branchName}})</i></h2>
+                </td>
+              </tr>
+              <tr>
+                <td width="790" style="background:#ffffff;color:#183867;">
+                  <p>Если сотрудник из списка не работает, то необходимо незамедлительно сообщить об этом, написав
+                    письмо в ИТ отдел admins@gencoindustry.com, с указанием табельного номера, ФИО, E-mail</p>
+                  <p>Данное письмо еженедельно автоматически генерируется и отправляется на общую электронную почту
+                    отдела кадров каждого объекта.</p>
+                  <p>Данные актуальны на: {{currentDateTime}}, Кол-во пользователей: {{data.length}}.</p>
+                </td>
+              </tr>
+            </table><!-- header -->
+            <p></p>
+            <p></p>
+            <table id="users" width="790" cellpadding="5" cellspacing="0" style="border: 1px solid #183867;">
+              <tr>
+                <td style="border: 1px solid #183867;background:#183867;color:#fff" align="center"><b>№</b></td>
+                <td style="border: 1px solid #183867;background:#183867;color:#fff" align="center"><b>Табельный
+                    номер</b></td>
+                <td style="border: 1px solid #183867;background:#183867;color:#fff" align="center"><b>ФИО</b></td>
+                <td style="border: 1px solid #183867;background:#183867;color:#fff" align="center"><b>Должность</b></td>
+                <td style="border: 1px solid #183867;background:#183867;color:#fff" align="center"><b>E-mail</b></td>
+              </tr>
+              {{#each data}}
+              <tr>
+                <td style="border: 1px solid #183867;" align="center">{{inc @index}}</td>
+                <td style="border: 1px solid #183867;" align="center">{{employeeNumber}}</td>
+                <td style="border: 1px solid #183867;">{{description}}</td>
+                <td style="border: 1px solid #183867;">{{title}}</td>
+                <td style="border: 1px solid #183867;">{{mail}}</td>
+              </tr>
+              {{/each}}
+            </table> {{!-- users --}}
+            <p>&nbsp;</p>
+          </td>
+        </tr>
+      </table>{{!-- main --}}
+      <table id="bottom-message" cellpadding="20" cellspacing="0" width="800" align="center">
+        <tr>
+          <td align="center">При возникновении уточнений по данному письму, просьба обращаться в ИТ отдел: <a
+              href="mailto:admins@gencoindustry.com">admins@gencoindustry.com</a></td>
+        </tr>
+
+    </td>
+  </tr>
+</table> {{!-- root --}}
+
+</table> {{!-- bottom-message --}}
+
+</table>
